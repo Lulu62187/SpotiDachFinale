@@ -1,0 +1,222 @@
+@keyframes turnAround {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.vinyle {
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.disque {
+    position: relative;
+    display: inline-block;
+    animation: turnAround 5s infinite linear;
+}
+
+.pause {
+    animation-play-state: paused;
+}
+
+ul {
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li:hover {
+    background-color: #685816; /* Fond jaune au survol */
+    color: #ffffff; /* Texte blanc au survol */
+    cursor: pointer; /* Curseur pointeur au survol */
+}
+
+#btnRandom {
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #074075;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnRandom:hover {
+    background-color: #22cfb8;
+}
+
+#disque-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    margin-top: 40px; /* Espacement supplémentaire */
+}
+
+#disque {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#lecteur {
+    width: calc(100% - 80px); /* Largeur du lecteur audio moins la largeur du bouton aléatoire */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.clignote {
+    animation: blink 1s infinite alternate;
+}
+
+ul#playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    flex: 0 0 200px;
+}
+
+#bandeau {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+/* Styles pour la barre de recherche */
+#barre-recherche {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#barre-recherche input[type="text"] {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#barre-recherche input[type="submit"] {
+    background-color: #074075;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+        /* Styles pour le bandeau */
+        #bandeau {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Styles pour la barre de recherche */
+        #barre-recherche {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #barre-recherche input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        #barre-recherche input[type="submit"] {
+            background-color: #074075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #barre-recherche input[type="submit"]:hover {
+            background-color: #22cfb8;
+    }
+/* Styles CSS pour organiser les titres en trois par ligne */
+#playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: calc(3 * (30px + 40px)); /* Hauteur de 3 lignes */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
+    gap: 20px; /* Espacement entre les colonnes */
+
+}
+
+li {
+    flex: 0 0 calc(25% - 20px); /* Pour afficher trois éléments par ligne avec un espacement */
+    margin-bottom: 20px; /* Espacement entre les lignes */
+    background-color: #333;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+li:nth-child(3n) {
+    margin-right: 0; /* Aucun espacement à droite pour chaque troisième élément */
+}
+
+li:hover {
+    background-color: #1f8811; /* Fond jaune au survol */
+    color: #ffffff; /* Texte blanc au survol */
+}

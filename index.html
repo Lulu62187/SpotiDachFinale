@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotiDach</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="bandeau">
+        <h1>SpotiDach</h1>
+    </div>
+    <div id="barre-recherche">
+        <form id="formRecherche">
+            <input type="text" id="rechercheInput" placeholder="Rechercher...">
+            <input type="submit" value="Rechercher">
+        </form>
+    </div>
+    <ul id="playlist">
+        <!-- Loop js dynamique -->
+    </ul>
+    <div id="disque-container">
+        <div class="disque pause" id="disque">
+            <!-- Image par défaut -->
+            <img class="vinyle pause" id="vinyle" src="assets/pictures/vinyle3_2.png" alt="Disque Vinyle">
+            <!-- Image par défaut -->
+            <img class="cover pause" id="cover" src="uploads/covers/1.jpeg" alt="Cover">
+        </div>
+        <audio id="lecteur" controls src=""></audio>
+        <button id="btnRandom">Aléatoire</button> <!-- Bouton aléatoire -->
+    </div>
+
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>
